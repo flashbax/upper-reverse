@@ -1,14 +1,10 @@
-
-//fuction to change text to upper case
-
 window.onload = function () {
-document.getElementById("button").onclick = function () {
-    //var up = document.getElementById("inputTxt"); 
-
-    //function upper() { 
-        console.log("hi");
-        //up.toUpperCase();
-   // }
-
-};
+    
+    //function to change text to upper case
+    document.getElementById("button").onclick = function () {
+        var str = document.getElementById("inputTxt").value; 
+        var up = str.toUpperCase();
+        //console.log(up);
+        document.getElementById("outTxt").innerHTML = up; 
+    };
 };
