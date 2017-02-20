@@ -8,10 +8,16 @@ window.onload = function () {
         var up = str.toUpperCase();
         //get length of string from text box    
         var len = str.length;
+
+        var arr = []; 
+
+        
         //display result in label
         document.getElementById("outTxt").innerHTML = up; 
-         
-        console.log(len); 
+
+        arr.push(str);
+
+        console.log(arr); 
     };
 
     
