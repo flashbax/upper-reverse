@@ -1,26 +1,32 @@
 window.onload = function () {
-
-    //function to reverse and change text to upper case
+     
+       
     document.getElementById("button").onclick = function () {
-        //get value of text box
-        var str = document.getElementById("inputTxt").value; 
-        //convert to upper case and store in up
-        var up = str.toUpperCase();
+    
+    //get value of text box
+    var str = document.getElementById("inputTxt").value;
+    
+    function cap(e) { 
+         //convert to upper case and store in up
+         var up = str.toUpperCase();
+         return up;
+    };
+        
+    function rev(e) {  
         //get length of string from text box    
         var len = str.length;
-        
+        //create empty array for string
         var arr = []; 
-
+        //loop trough each char
         for (var i = 0; i<=len; i++) { 
             arr.push(str.charAt(len - i));
         }
-        
-
-        //display result in label
-        document.getElementById("outTxt").innerHTML = arr.join('');
-        document.getElementById("outTxt").innerHTML = up;
-        //console.log(arr); 
+        return arr.join('');
     };
-
     
-};
+        console.log(cap(str)); 
+        console.log(rev(str));
+        //document.getElementById("outTxt").innerHTML; 
+    };
+    
+};  
