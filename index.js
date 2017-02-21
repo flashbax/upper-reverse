@@ -1,8 +1,8 @@
 window.onload = function () {
      
        
+   
     document.getElementById("button").onclick = function () {
-    
     //get value of text box
     var str = document.getElementById("inputTxt").value;
     
@@ -23,10 +23,23 @@ window.onload = function () {
         }
         return arr.join('');
     };
-    
-        console.log(cap(str)); 
-        console.log(rev(str));
-        //document.getElementById("outTxt").innerHTML; 
+
+    function doit(e) { 
+        var revStr = rev(str);
+        var capStr = cap(str);
+        var revcap = revStr+capStr;
+        return (revcap);
     };
+
+
+    
+        //document.getElementById("outTxt").innerHTML = do(str);
+        console.log(doit(str));  
+    };
+    
+        //console.log(cap(str)); 
+        //console.log(rev(str));
+        //document.getElementById("outTxt").innerHTML; 
+
     
 };  
